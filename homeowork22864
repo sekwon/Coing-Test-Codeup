@@ -1,0 +1,21 @@
+fatigue, work, cumul, burnout = map(int, input().split())
+
+day = 0
+result = 0
+count = 0
+
+if fatigue > burnout :
+  print(0)
+else :
+  while day != 24 :
+    day += 1
+    if count + fatigue <= burnout :
+      result += work
+      count += fatigue
+    else :
+      if count - cumul >= 0 :
+        count -= cumul
+      else :
+        count = 0
+
+  print(result)
