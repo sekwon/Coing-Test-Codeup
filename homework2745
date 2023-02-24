@@ -1,0 +1,10 @@
+num1, num2=input().split()
+
+number="0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ"
+
+num1=num1[::-1]
+result = 0
+
+for i, n in enumerate(num1):
+   result += (int(num2)**i)*(number.index(n))
+print(result)
