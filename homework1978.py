@@ -3,15 +3,21 @@
 #주어진 수들 중 소수의 개수를 출력함
 
 n=int(input())
-data=list(int(input()))
-counter=0
+data=list(map(int, input(). split()))
+count=0
+prime=[]
 
-for i in range(len(data))):
-  for j in rnage(i+1, len(data)-1):
-    if i % j ==0:
-      break
-      else;counter +=1
+def is_prime(data):
+    for i in range(2, data-1):
+        if data % i == 0:
+            return False
+    return True
+
+for i in range(1, len(data)):
+    if(is_prime(data[i]) == True):
+        prime.append(data[i])
+        count += 1
+    
       
-    print(counter)
-  
-
+print(prime)
+print(count)
